@@ -1,0 +1,97 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    background-color: #191970;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+
+
+}
+.bubble{
+    width: 100px;
+    height: 100px;
+    border: 1px solid white;
+    box-shadow: inset 4px -4px 5px white;
+    border-radius: 50%;
+    background-color: #191970;
+    backdrop-filter: blur(2px);
+    position: relative;
+    bottom: -80px;
+}
+/* small circle */
+.bubble::before{
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: white;
+    top: 15px;
+    left: 13px;
+    box-shadow: 0 0 10px white;
+
+}
+.bubble1{
+    left: 28%;
+    transform: scale(0.8);
+    animation: bubble 6s ease-in 5s infinite;
+}
+.bubble2{
+    left: 50%;
+    transform: scale(1.09);
+    animation: bubble 8s ease-in 1.3s infinite;
+
+}
+.bubble3{
+    left: 40%;
+    transform: scale(0.5);
+    animation: bubble 5s ease-in 4s infinite;
+
+}
+.bubble4{
+    left: 10%;
+    transform: scale(0.65);
+    animation: bubble 7s ease-in 3s infinite;
+
+}
+.bubble5{
+    left: 65%;
+    transform: scale(1.12);
+    animation: bubble 9s ease-in 2s infinite;
+
+}
+.bubble6{
+    left: 9%;
+    transform: scale(0.8);
+    animation: bubble 8s ease-in 3s infinite;
+
+}
+.bubble7{
+    left: 65%;
+    transform: scale(0.75);
+    animation: bubble 6s ease-in 2s infinite;
+
+}
+.bubble8{
+    left: 34%;
+    transform: scale(0.8);
+    animation: bubble 4s ease-in 1.8s infinite;
+
+} 
+/* transparency (0 being blur and 1 being clear) and direction (left and up) */
+@keyframes bubble {
+    0%{
+         opacity: 0; 
+    }
+    99%{
+        opacity: 1;   
+    }
+    100%{
+        transform: translate(100px, -500px);
+    
+    }
+}
